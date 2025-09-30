@@ -96,6 +96,11 @@ clientms/
 ├─ Dockerfile
 └─ checkstyle/checkstyle.xml
 ```
+flowchart LR
+  A[Client / Postman] --> B[ClientMS (Spring Boot)]
+  B --> K[(Kafka)]
+  B --> R[(Redis)]
+  B --> D[(MySQL)]
 
 ---
 
