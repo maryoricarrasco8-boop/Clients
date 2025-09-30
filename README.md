@@ -19,31 +19,7 @@ Incluye pruebas automatizadas (JUnit/Mockito), calidad de código (JaCoCo/Checks
 ## ⚙️ Tecnologías
 Java 17 • Spring Boot 3 • Maven • MySQL • Redis • Apache Kafka • Docker/Compose • Swagger/OpenAPI • JUnit 5 • Mockito • JaCoCo • Checkstyle
 
----
 
-## 🧭 Arquitectura (Mermaid)
-
-```mermaid
-flowchart LR
-    subgraph ClientApps
-      A[Postman / Frontend] --> B((API Gateway opcional))
-    end
-
-    B --> S[ClientMS (Spring Boot)]
-
-    subgraph Integrations
-      K[(Kafka)]
-      R[(Redis Cache)]
-      D[(MySQL DB)]
-    end
-
-    S --> K
-    S --> R
-    S --> D
-
-```
-
----
 
 ## 🔗 Endpoints principales
 | Método | Endpoint            | Descripción                 |
