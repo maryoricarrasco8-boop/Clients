@@ -22,28 +22,25 @@ Java 17 • Spring Boot 3 • Maven • MySQL • Redis • Apache Kafka • Doc
 ---
 
 ## 🧭 Arquitectura (Mermaid)
+
 ```mermaid
 flowchart LR
-    subgraph Client Apps
-      A[Postman / Frontend] -->|HTTP/JSON| B((API Gateway opcional))
+    subgraph ClientApps
+      A[Postman / Frontend] --> B((API Gateway opcional))
     end
 
-    B -->|REST| S[ClientMS (Spring Boot)]
-    A -->|REST| S
+    B --> S[ClientMS (Spring Boot)]
 
     subgraph Integrations
-      K[(Kafka)]:::kafka
-      R[(Redis Cache)]:::redis
-      D[(DB: MySQL)]:::db
+      K[(Kafka)]
+      R[(Redis Cache)]
+      D[(MySQL DB)]
     end
 
-    S -- publish/consume --> K
-    S -- cache read/write --> R
-    S -- CRUD --> D
+    S --> K
+    S --> R
+    S --> D
 
-    classDef kafka fill:#f6e05e,stroke:#b7791f,stroke-width:1px,color:#1a202c;
-    classDef redis fill:#fed7d7,stroke:#c53030,stroke-width:1px,color:#1a202c;
-    classDef db fill:#bee3f8,stroke:#2b6cb0,stroke-width:1px,color:#1a202c;
 ```
 
 ---
