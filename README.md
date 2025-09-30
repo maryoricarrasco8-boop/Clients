@@ -103,7 +103,3 @@ flowchart LR
   B --> D[(MySQL)]
 
 ---
-
-## 👩‍💻 Autores
-Grupo 5 – Bootcamp NTT Data – TechGirls 2025  
-*(Antonella, Rosario, Loana, Katty, Nataly, etc.)*
