@@ -1,0 +1,11 @@
+{
+  "name": "ClientMS Local",
+  "values": [
+    {
+      "key": "baseUrl",
+      "value": "http://localhost:8080",
+      "type": "text",
+      "enabled": true
+    }
+  ]
+}

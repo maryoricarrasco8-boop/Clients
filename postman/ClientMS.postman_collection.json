@@ -1,0 +1,64 @@
+{
+  "info": {
+    "name": "ClientMS Collection",
+    "_postman_id": "b1a2f3c4-d5e6-7890-abcd-1234567890ab",
+    "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+  },
+  "item": [
+    {
+      "name": "List clients",
+      "request": {
+        "method": "GET",
+        "url": "{{baseUrl}}/api/clients"
+      }
+    },
+    {
+      "name": "Get client by id",
+      "request": {
+        "method": "GET",
+        "url": "{{baseUrl}}/api/clients/1"
+      }
+    },
+    {
+      "name": "Create client",
+      "request": {
+        "method": "POST",
+        "header": [
+          {
+            "key": "Content-Type",
+            "value": "application/json"
+          }
+        ],
+        "body": {
+          "mode": "raw",
+          "raw": "{\"documentType\":\"DNI\",\"documentNumber\":\"12345678\",\"firstName\":\"Ana\",\"lastName\":\"Perez\",\"email\":\"ana@demo.com\",\"phone\":\"999999999\"}"
+        },
+        "url": "{{baseUrl}}/api/clients"
+      }
+    },
+    {
+      "name": "Update client",
+      "request": {
+        "method": "PUT",
+        "header": [
+          {
+            "key": "Content-Type",
+            "value": "application/json"
+          }
+        ],
+        "body": {
+          "mode": "raw",
+          "raw": "{\"firstName\":\"Ana Maria\"}"
+        },
+        "url": "{{baseUrl}}/api/clients/1"
+      }
+    },
+    {
+      "name": "Delete client",
+      "request": {
+        "method": "DELETE",
+        "url": "{{baseUrl}}/api/clients/1"
+      }
+    }
+  ]
+}
